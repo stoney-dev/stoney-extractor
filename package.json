@@ -1,0 +1,55 @@
+{
+  "name": "@stoney-dev/extractor",
+  "version": "0.1.0",
+  "description": "Deterministic API shape extractor. Reads your route code, emits OpenAPI 3.1.",
+  "keywords": [
+    "openapi",
+    "api",
+    "contract",
+    "nextjs",
+    "stoney",
+    "static-analysis"
+  ],
+  "homepage": "https://stoneydev.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stoneydev/stoney-extractor.git"
+  },
+  "license": "MIT",
+  "author": "The Tiny Rock, LLC",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm build && pnpm test"
+  },
+  "dependencies": {
+    "ts-morph": "^24.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
