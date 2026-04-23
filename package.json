@@ -1,6 +1,6 @@
 {
   "name": "@stoney-dev/extractor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Deterministic API shape extractor. Reads your route code, emits OpenAPI 3.1.",
   "keywords": [
     "openapi",
